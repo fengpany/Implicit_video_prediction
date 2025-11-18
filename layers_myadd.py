@@ -140,7 +140,7 @@ class NvaeConv2D(L.Layer):
 
     def build(self, input_shape):
         self.channels_in = input_shape[-1]
-        if self.abs_channels is None: #-1表示upsampling,abs_channel是最终输出的维度s
+        if self.abs_channels is None: 
             assert self.scale_channels != 0
             if self.scale_channels > 0 :
                 self.abs_channels = self.channels_in * self.scale_channels
